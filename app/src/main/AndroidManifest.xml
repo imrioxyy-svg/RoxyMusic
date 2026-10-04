@@ -2,12 +2,18 @@
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <application android:theme="@style/AppTheme" android:label="RØYX Music" android:allowBackup="true" android:supportsRtl="true">
+    <application
+        android:icon="@drawable/roxy_logo"
+        android:theme="@style/AppTheme"
+        android:label="RØYX Music"
+        android:allowBackup="true"
+        android:supportsRtl="true">
         <activity android:name=".MainActivity" android:screenOrientation="portrait" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity android:icon="@drawable/roxy_logo">
+        </activity>
         <service android:name=".MusicService" android:exported="true" android:foregroundServiceType="mediaPlayback"/>
     </application>
 </manifest>
