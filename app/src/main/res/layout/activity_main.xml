@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:padding="18dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/logo" android:text="RØYX  MUSIC" android:textStyle="bold" android:textSize="23sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <TextView android:id="@+id/profile" android:text="R" android:gravity="center" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/bg_card" android:layout_width="42dp" android:layout_height="42dp"/>
+    </LinearLayout>
+    <EditText android:id="@+id/search" android:hint="Search your music..." android:textColor="@color/white" android:textColorHint="@color/muted" android:singleLine="true" android:padding="14dp" android:layout_marginHorizontal="16dp" android:background="@drawable/bg_search" android:layout_width="match_parent" android:layout_height="52dp"/>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:scrollbars="none">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@+id/homeTab" android:text="Home" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/libraryTab" android:text="Library" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/favoritesTab" android:text="Favorites" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/settingsTab" android:text="Settings" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView android:id="@+id/heading" android:text="Your music" android:textStyle="bold" android:textSize="22sp" android:textColor="@color/white" android:paddingHorizontal="18dp" android:paddingTop="8dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingHorizontal="12dp"/>
+    <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp" android:background="#120D17" android:layout_width="match_parent" android:layout_height="82dp">
+        <TextView android:id="@+id/nowIcon" android:text="♪" android:gravity="center" android:textSize="25sp" android:textColor="@color/white" android:background="@drawable/bg_card" android:layout_width="54dp" android:layout_height="54dp"/>
+        <LinearLayout android:orientation="vertical" android:paddingStart="12dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"><TextView android:id="@+id/nowTitle" android:text="Nothing playing" android:textColor="@color/white" android:maxLines="1" android:ellipsize="end" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/><TextView android:id="@+id/nowArtist" android:text="Pick a song" android:textColor="@color/muted" android:maxLines="1" android:ellipsize="end" android:layout_width="match_parent" android:layout_height="wrap_content"/></LinearLayout>
+        <ImageButton android:id="@+id/prev" android:src="@android:drawable/ic_media_previous" android:contentDescription="Previous" android:background="@android:color/transparent" android:layout_width="42dp" android:layout_height="42dp"/>
+        <ImageButton android:id="@+id/play" android:src="@android:drawable/ic_media_play" android:contentDescription="Play" android:background="@android:color/transparent" android:layout_width="50dp" android:layout_height="50dp"/>
+        <ImageButton android:id="@+id/next" android:src="@android:drawable/ic_media_next" android:contentDescription="Next" android:background="@android:color/transparent" android:layout_width="42dp" android:layout_height="42dp"/>
+    </LinearLayout>
+</LinearLayout>
